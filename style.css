@@ -1,0 +1,123 @@
+/*centers title image and time left + flags remaining*/
+* {
+    text-align: center;
+
+}
+
+h2 {
+    display: inline-block; /*puts time left and flags remaining side by side*/
+    text-align: center;
+    margin-right: 25px; /*spaces out time left and flags remaining*/
+    color: black;
+    background-color: #b5d8af;
+    opacity: 0.7;
+}
+
+
+.grid {
+    height: 400px;
+    width: 400px;
+
+    /*makes sure our squares appear inline instead of stacked over each other like the default arrangement of divs*/
+    display: flex;
+
+    /*makes sure each one wraps over each other so they fit in the grid and once they do not, they wrap over each other like a snake*/
+    flex-wrap: wrap;
+
+    /*these are all to center the grid*/
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    background-color: #b5d8af;
+    border: #b5d8af 10px solid;
+}
+
+div {
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.valid {
+    height: 40px;
+    width: 40px;
+    border: 5px solid;
+    border-color: #f5f3eb #bab7a9 #a9baa9 #fff9db;
+    box-sizing: border-box; /*lines up all the colors inside the grid*/ 
+    font-size: 23px;
+}
+
+/*this is for after the player clicks on a square, the colors of the spaces that are expanded*/
+.checked {
+    height: 40px;
+    width: 40px;
+    border: 2px solid;
+    background-color: b5d8af;
+    border-color: #9c998d;
+    box-sizing: border-box;
+    font-size: 23px;
+} 
+
+.bomb {
+    height: 40px;
+    width: 40px;
+    border: 5px solid; /*easy to tell where bombs are right now because this does not match .checked*/
+    border-color: /*top box shadow*/ #f5f3eb /*right box shadow*/#bab7a9 /*bottom of box shadow*/ #bab7a9 /*left box shadow*/ #fff9db;
+    box-sizing: border-box;
+    font-size: 23px;
+}
+
+/*for the colors of each number to match og minesweeper*/
+.one {
+    color: #e76346;
+}
+
+.two {
+    color: #4199d3
+}
+
+.three {
+    color: #44ad46;
+
+}
+
+.four {
+    color: #bb41d3;
+}
+
+#result {
+    margin-top: 5px;
+    color: black;
+    font-size: 28px;
+    opacity: 0.7;
+}
+
+/*styles any div that goes inside the grid*/
+/*all other divs will be unaffected by this*/
+.grid div {
+    height: 40px;
+    width: 40px;
+}
+
+#restart-button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+    border: 5px solid;
+    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+    background-color: #b5d8af;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
